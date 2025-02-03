@@ -2,12 +2,15 @@ const router = require('express').Router();
 // const instagramRoutes = require('../instagramController');
 
 // Home page route
-router.get('/', async (req, res) => {
-  try {
-    res.render('about', { title: 'About Us' });
-  } catch (err) {
-    res.status(500).json(err);
-  }
+// router.get('/', async (req, res) => {
+//   try {
+//     res.render('about', { title: 'About Us' });
+//   } catch (err) {
+//     res.status(500).json(err);
+//   }
+// });
+router.get('/', (req, res) => {
+  res.render('about', { title: 'About Us' });
 });
 
 // About page route
